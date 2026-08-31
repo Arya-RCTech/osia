@@ -1,0 +1,115 @@
+{
+    "defaults": {
+        "chat_model": "OnDuty",
+        "cheap_model": "gemini-3.5-flash-lite"
+    },
+    "providers": {
+        "groq": {
+            "api_key_env": "GROQ_API_KEY"
+        },
+        "google": {
+            "api_key_env": "GEMINI_API_KEY"
+        },
+        "koboldcpp": {
+            "api_key_env": null
+        }
+    },
+    "models": {
+        "openai/gpt-oss-120b": {
+            "provider": "groq",
+            "display_name": "GPT-OSS 120B",
+            "max_context_tokens": 6000,
+            "rag_budget_tokens": 1500,
+            "max_output_tokens": 1024,
+            "rpm_limit": 30,
+            "supports_thinking": true
+        },
+        "qwen/qwen3.6-27b": {
+            "provider": "groq",
+            "display_name": "Qwen 3.6 Coder",
+            "max_context_tokens": 6000,
+            "rag_budget_tokens": 1500,
+            "max_output_tokens": 2048,
+            "rpm_limit": 30,
+            "supports_thinking": true
+        },
+        "gemma-4-31b-it": {
+            "provider": "google",
+            "display_name": "Gemma 4 31B",
+            "max_context_tokens": 12000,
+            "rag_budget_tokens": 4000,
+            "max_output_tokens": 4500,
+            "rpm_limit": 30,
+            "supports_thinking": true
+        },
+        "gemma-4-26b-a4b-it": {
+            "provider": "google",
+            "display_name": "Gemma 4 26B",
+            "max_context_tokens": 12000,
+            "rag_budget_tokens": 4000,
+            "max_output_tokens": 5400,
+            "rpm_limit": 30,
+            "supports_thinking": true
+        },
+        "gemini-3.7-flash": {
+            "provider": "google",
+            "display_name": "Gemini 3.7 Flash",
+            "max_context_tokens": 128000,
+            "rag_budget_tokens": 10000,
+            "max_output_tokens": 8192,
+            "rpm_limit": 5,
+            "supports_thinking": false
+        },
+        "gemini-3.6-flash": {
+            "provider": "google",
+            "display_name": "Gemini 3.6 Flash",
+            "max_context_tokens": 128000,
+            "rag_budget_tokens": 10000,
+            "max_output_tokens": 8100,
+            "rpm_limit": 5,
+            "supports_thinking": false
+        },
+        "gemini-3.5-flash": {
+            "provider": "google",
+            "display_name": "Gemini 3.5 Flash",
+            "max_context_tokens": 128000,
+            "rag_budget_tokens": 10000,
+            "max_output_tokens": 8100,
+            "rpm_limit": 5,
+            "supports_thinking": false
+        },
+        "gemini-3.5-flash-lite": {
+            "provider": "google",
+            "display_name": "Gemini 3.5 Flash Lite",
+            "max_context_tokens": 128000,
+            "rag_budget_tokens": 10000,
+            "max_output_tokens": 8192,
+            "rpm_limit": 15,
+            "supports_thinking": false
+        },
+        "OnDuty": {
+            "provider": "koboldcpp",
+            "display_name": "Gemma4 (QAT)",
+            "max_context_tokens": 16384,
+            "rag_budget_tokens": 1500,
+            "max_output_tokens": 10240,
+            "rpm_limit": 9999,
+            "supports_thinking": true,
+            "port": 5001,
+            "gguf_filename": "gemma-4-12B-QAT-Q4_K_XL.gguf",
+            "gpulayers": 50
+        },
+        "Manager": {
+            "provider": "koboldcpp",
+            "display_name": "Manager",
+            "max_context_tokens": 8192,
+            "rag_budget_tokens": 1600,
+            "max_output_tokens": 2000,
+            "rpm_limit": 9999,
+            "supports_thinking": false,
+            "port": 5002,
+            "gguf_filename": "Qwen3.5-4B-Q5_K_M.gguf",
+            "gpulayers": 32
+        }
+    }
+}

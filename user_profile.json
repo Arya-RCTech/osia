@@ -1,0 +1,10 @@
+{
+    "user_name": "your name",
+    "role": "Developer",
+    "projects": "OSIA (On-device Sovereign Intent Agent)",
+    "personality": "Your preferences and personality",
+    "key_facts": [
+        "OSIA is a next generation AI Agent with tools integrated with Linux OS"
+    ],
+    "User_location": "//your location(required for get_time tool"
+}
